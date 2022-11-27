@@ -22,3 +22,15 @@ Crushee is an image compression tool, powered by Electron and Node.js. You can c
 * Quality Level sliders - experiment and find the perfect balance between picture quality and file size!
 * Advanced format-specific options, such as Chroma Subsampling Level and Color Count
 * Light/Dark Mode app theme
+
+## Package Notes
+
+The installer executed by this package was built using Nullsoft Scriptable Install System (NSIS). For advanced setup scenarios, refer to [NSIS's command-line interface documentation](https://nsis.sourceforge.io/Docs/Chapter3.html). Any desired arguments can be appended to (or optionally overriding with the `--override-arguments` switch) the package's default install arguments with the `--install-arguments` option.
+
+---
+
+For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
+
+```shell
+choco feature enable --name=useRememberedArgumentsForUpgrades
+```
