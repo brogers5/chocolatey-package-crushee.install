@@ -16,22 +16,18 @@ function Get-SoftwareUri {
         [Version] $Version
     )
 
-    if ($null -eq $Version)
-    {
+    if ($null -eq $Version) {
         # Default to latest stable version
         $release = (Get-GitHubRelease -OwnerName $owner -RepositoryName $repository -Latest)[0]
     }
-    else 
-    {
+    else {
         $release = Get-GitHubRelease -OwnerName $owner -RepositoryName $repository -Tag "v$($Version.ToString())"
     }
     $releaseAssets = Get-GitHubReleaseAsset -OwnerName $owner -RepositoryName $repository -Release $release.ID
 
     $windowsInstallerAsset = $null
-    foreach ($asset in $releaseAssets)
-    {
-        if ($asset.name -match $installerFileNameRegex)
-        {
+    foreach ($asset in $releaseAssets) {
+        if ($asset.name -match $installerFileNameRegex) {
             $windowsInstallerAsset = $asset
             break;
         }
@@ -40,8 +36,7 @@ function Get-SoftwareUri {
         }
     }
 
-    if ($null -eq $windowsInstallerAsset)
-    {
+    if ($null -eq $windowsInstallerAsset) {
         throw "Cannot find published Windows installer asset!"
     }
 
