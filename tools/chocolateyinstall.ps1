@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$installerFileName = 'Crushee-v2.4.5-win-setup.exe'
+$installerFileName = 'Crushee-v2.4.6-win-setup.exe'
 $filePath = Join-Path -Path $toolsDir -ChildPath $installerFileName
 
 $packageArgs = @{

@@ -3,17 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>crushee.install</id>
-    <version>2.4.5</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-crushee.install/tree/v2.4.5</packageSourceUrl>
+    <version>2.4.6</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-crushee.install/tree/v2.4.6</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>Crushee (Install)</title>
     <authors>Xander Frangos</authors>
     <projectUrl>https://crushee.app/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-crushee.install@899fd1d5ccc784374ecd07d819958fa2f6f4f9a8/crushee.install.png</iconUrl>
-    <copyright>Copyright © 2022 Xander Frangos</copyright>
-    <licenseUrl>https://github.com/xanderfrangos/crushee/blob/v2.4.5/LICENSE</licenseUrl>
+    <copyright>Copyright © 2023 Xander Frangos</copyright>
+    <licenseUrl>https://github.com/xanderfrangos/crushee/blob/v2.4.6/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/xanderfrangos/crushee/tree/v2.4.5</projectSourceUrl>
+    <projectSourceUrl>https://github.com/xanderfrangos/crushee/tree/v2.4.6</projectSourceUrl>
     <bugTrackerUrl>https://github.com/xanderfrangos/crushee/issues</bugTrackerUrl>
     <tags>crushee jpeg jpg png gif svg webp avif heic image conversion resize resizing crop cropping compress compression batch optimization quality chroma subsampling chroma-subsampling electron nodejs 64-bit embedded cross-platform foss</tags>
     <summary>Precisely compress, resize, and convert images.</summary>
@@ -41,8 +41,20 @@ Crushee is an image compression tool, powered by Electron and Node.js. You can c
 * Quality Level sliders - experiment and find the perfect balance between picture quality and file size!
 * Advanced format-specific options, such as Chroma Subsampling Level and Color Count
 * Light/Dark Mode app theme
+
+## Package Notes
+
+The installer executed by this package was built using Nullsoft Scriptable Install System (NSIS). For advanced setup scenarios, refer to [NSIS's command-line interface documentation](https://nsis.sourceforge.io/Docs/Chapter3.html). Any desired arguments can be appended to (or optionally overriding with the `--override-arguments` switch) the package's default install arguments with the `--install-arguments` option.
+
+---
+
+For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
+
+```shell
+choco feature enable --name="'useRememberedArgumentsForUpgrades'"
+```
 ]]></description>
-    <releaseNotes>https://github.com/xanderfrangos/crushee/releases/tag/v2.4.5</releaseNotes>
+    <releaseNotes>https://github.com/xanderfrangos/crushee/releases/tag/v2.4.6</releaseNotes>
   </metadata>
   <files>
     <file src="tools\chocolateyinstall.ps1" target="tools" />

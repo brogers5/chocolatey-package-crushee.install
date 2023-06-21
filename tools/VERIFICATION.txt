@@ -5,14 +5,14 @@ in verifying that this package's contents are trustworthy.
 The packaged Windows installer binary is available for independent download via the
 Releases page on Crushee's GitHub repository. A download link for the packaged version
 is included at the following URL:
-https://github.com/xanderfrangos/crushee/releases/tag/v2.4.5
+https://github.com/xanderfrangos/crushee/releases/tag/v2.4.6
 
 For convenience, this is a direct URL to the relevant asset:
-https://github.com/xanderfrangos/crushee/releases/download/v2.4.5/Crushee-v2.4.5-win-setup.exe
+https://github.com/xanderfrangos/crushee/releases/download/v2.4.6/Crushee-v2.4.6-win-setup.exe
 
 The following PowerShell command will print a calculated SHA256 hash:
 
-    (Get-FileHash -Path Crushee-v2.4.5-win-setup.exe -Algorithm SHA256).Hash
+    (Get-FileHash -Path Crushee-v2.4.6-win-setup.exe -Algorithm SHA256).Hash
 
 This command should be executed against an independently downloaded binary, as well
 as the copy distributed with the package. Both hash values should be identical. A
@@ -20,4 +20,4 @@ matching hash value should confirm that no corruption or tampering has occurred
 during this package's generation process.
 
 For reference, the following SHA256 hash was calculated during the package's automated creation:
-5FD5C6B80E03CCCBB2F956E5D4680C15FB8A2462B53C2B55C692CED27C7E5610
+1FD7748D457AE86A440361545559CE7A373D73F378404F8EF7860CF3DF5F57EF
