@@ -1,5 +1,4 @@
 Import-Module au
-Import-Module PowerShellForGitHub
 
 $currentPath = (Split-Path $MyInvocation.MyCommand.Definition)
 . $currentPath\helpers.ps1
